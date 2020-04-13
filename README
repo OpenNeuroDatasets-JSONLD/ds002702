@@ -1,6 +1,8 @@
 # High-field 7T Visual fMRI Datasets
 
-This contains the raw fMRI data and structural images (T1, T2) used in the "Temporal Decomposition Method" paper (https://www.biorxiv.org/content/10.1101/868455v1). The data provided here also subsumes most of the datasets used in the "Critical Assessment of Sub-millimeter fMRI" paper (https://doi.org/10.1016/j.neuroimage.2019.02.006).
+This contains the raw fMRI data and structural images (T1, T2) used in the "Temporal Decomposition Method" paper (https://www.biorxiv.org/content/10.1101/868455v1). The data provided here also subsumes most of the datasets used in the "Critical Assessment of Sub-millimeter fMRI" paper (https://doi.org/10.1016/j.neuroimage.2019.02.006) and the "Ultra-high-res VTC" paper (https://doi.org/10.1523/JNEUROSCI.2106-19.2020).
+
+Note that whereas we provide here the raw data, a fully pre-processed version of the data is provided at https://osf.io/j2wsc.
 
 ## Experimental Design
 
@@ -16,14 +18,14 @@ The Category experiment involved ten stimulus conditions. Each lasted 4 s. They 
 
 Session names:
  * floc7T - category experiment at 7T 0.8mm
- * anatomicals - structurals at 3T
+ * anatomicals - structurals at 3T 0.8mm
  * ring7T - eccentricity experiment at 7T 0.8mm
  * ringSE - eccentricity experiment at 7T 1.05mm using spin-echo
  * ring3T - eccentricity experiment at 3T 2.4mm
 
-Scan sessions generally involved multiple fieldmaps. The fieldmaps occurred before and after the fMRI runs as well as periodically in between the fMRI runs. The precise order in which the fieldmaps were acquired can be derived from the scan timing records.
+Scan sessions generally involved multiple fieldmaps. The fieldmaps occurred before and after the fMRI runs as well as periodically in between the fMRI runs. The precise order in which the fieldmaps and fMRI runs were acquired can be derived from the scan timing records.
 
-Structural sessions involved multiple T1w and T2w volumes acquired in succession (in order to allow averaging and improving signal-to-noise ratio). The Siemens scanner provided two versions of each structural acquisition; we provide here the version that is "Pre-Scan Normalized".
+Structural sessions involved multiple T1w and T2w scans acquired in succession (in order to allow averaging and improving signal-to-noise ratio). The Siemens scanner provided two versions of each structural acquisition; we provide here the version that is "Pre-Scan Normalized".
 
 ## Defacing
 
@@ -42,4 +44,4 @@ Dicom files were converted to NIfTI format using dcm2niix, as packaged in with A
 
 ## FreeSurfer
 
-The FreeSurfer cortical surface reconstructions for the 11 subjects that were used in the manuscripts are available for download at the OSF site: https://osf.io/j2wsc/. These reconstructions include modifications for our analyses including manual segmentation edits, dense surfaces, special ROIs, etc.
+The FreeSurfer cortical surface reconstructions that were created and used in the papers are available for download at the OSF site: https://osf.io/j2wsc/. These reconstructions include modifications for our analysis pipelines, including manual segmentation edits, dense surfaces, special ROIs, etc.
